@@ -62,6 +62,9 @@ bool loadImageFrame(AVFormatContext* pFormatCtx, AVCodecContext* pCodecCtx, int 
         exit(-1);
     }
 
+
+
+
     uint8_t *buffer = (uint8_t *)av_malloc(av_image_get_buffer_size(AV_PIX_FMT_GRAY8, pCodecCtx->width, pCodecCtx->height, 1));
     av_image_fill_arrays(pFrameGray->data, pFrameGray->linesize, buffer, AV_PIX_FMT_GRAY8, pCodecCtx->width, pCodecCtx->height, 1);
 
